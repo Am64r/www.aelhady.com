@@ -1,0 +1,177 @@
+[
+    {
+      "text": "Contact Information:\n- Name: Amr Elhady\n- Phone: +1 609 495 7716\n- Email: ae429@cornell.edu\n- LinkedIn: [LinkedIn](#)\n- GitHub: [GitHub](#)\n- Website: aelhady.com\n- Location: Princeton, New Jersey",
+      "metadata": {
+        "section": "Contact Information",
+        "name": "Amr Elhady",
+        "phone": "+1 609 495 7716",
+        "email": "ae429@cornell.edu",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "website": "aelhady.com",
+        "location": "Princeton, New Jersey"
+      }
+    },
+    {
+      "text": "Education:\n- Institution: Cornell University\n- Location: Ithaca, New York\n- Degree: Bachelor of Engineering in Computer Science\n- Expected Graduation: December 2026\n- Relevant Studies: Discrete Structures, Linear Algebra, Statistics and Probability, Data Structures, Differential Equations",
+      "metadata": {
+        "section": "Education",
+        "institution": "Cornell University",
+        "location": "Ithaca, New York",
+        "degree": "Bachelor of Engineering in Computer Science",
+        "graduation_date": "December 2026",
+        "relevant_studies": [
+          "Discrete Structures",
+          "Linear Algebra",
+          "Statistics and Probability",
+          "Data Structures",
+          "Differential Equations"
+        ]
+      }
+    },
+    {
+      "text": "Skills:\n- Languages: Java, Python, JavaScript, Solidity, C++, HTML, CSS, SQL\n- Technologies: React.js, Node.js, React Native, Flask, AWS, Databases, Git, QLoRa, Langchain, APIs, Pandas, NumPy",
+      "metadata": {
+        "section": "Skills",
+        "languages": [
+          "Java",
+          "Python",
+          "JavaScript",
+          "Solidity",
+          "C++",
+          "HTML",
+          "CSS",
+          "SQL"
+        ],
+        "technologies": [
+          "React.js",
+          "Node.js",
+          "React Native",
+          "Flask",
+          "AWS",
+          "Databases",
+          "Git",
+          "QLoRa",
+          "Langchain",
+          "APIs",
+          "Pandas",
+          "NumPy"
+        ]
+      }
+    },
+    {
+      "text": "Experience:\n- Position: Data Science Intern\n- Company: BASF Corporation\n- Location: Durham, North Carolina\n- Dates: May 2024 – Aug 2024\n- Employment Type: Internship\n- Responsibilities:\n  • Engineered a custom Python web scraper using BeautifulSoup, Pandas, and NumPy to extract and preprocess over 150,000 agricultural blog posts into a data pipeline.\n  • Deployed Langchain Azure Search embedding and retrieval models, using prompt engineering and a vector database with custom JSON chunking for efficient data retrieval and insight generation.\n  • Boosted marketing campaign reach by 14% and reduced manual social media uptime by 90% by creating an interactive PowerBI dashboard to display raw data and GenAI processed insights.\n  • Presented project to executive suite and global leadership stakeholders, effectively communicating technical aspects and development process.",
+      "metadata": {
+        "section": "Experience",
+        "position": "Data Science Intern",
+        "company": "BASF Corporation",
+        "location": "Durham, North Carolina",
+        "dates": "May 2024 – Aug 2024",
+        "employment_type": "Internship",
+        "responsibilities": [
+          "Engineered a custom Python web scraper using BeautifulSoup, Pandas, and NumPy to extract and preprocess over 150,000 agricultural blog posts into a data pipeline.",
+          "Deployed Langchain Azure Search embedding and retrieval models, using prompt engineering and a vector database with custom JSON chunking for efficient data retrieval and insight generation.",
+          "Boosted marketing campaign reach by 14% and reduced manual social media uptime by 90% by creating an interactive PowerBI dashboard to display raw data and GenAI processed insights.",
+          "Presented project to executive suite and global leadership stakeholders, effectively communicating technical aspects and development process."
+        ]
+      }
+    },
+    {
+      "text": "Experience:\n- Position: Head of Engineering\n- Company: Cornell Blockchain\n- Location: Ithaca, New York\n- Dates: Oct 2023 – Present\n- Employment Type: Full-Time\n- Responsibilities:\n  • Researching and authoring a whitepaper for a new Proof of Sampling (PoSP) consensus model for Hyperbolic Labs, which optimizes arbitration using decentralized orchestrators and the EigenLayer restaking protocol.\n  • Wrote and deployed “Cornell Blockchain Coin” (CBC), an ERC-20 token on the Avalanche C-Chain with future plans to integrate into a larger Cornell Blockchain Decentralized Autonomous Organization (DAO) currently in development.",
+      "metadata": {
+        "section": "Experience",
+        "position": "Head of Engineering",
+        "company": "Cornell Blockchain",
+        "location": "Ithaca, New York",
+        "dates": "Oct 2023 – Present",
+        "employment_type": "Full-Time",
+        "responsibilities": [
+          "Researching and authoring a whitepaper for a new Proof of Sampling (PoSP) consensus model for Hyperbolic Labs, which optimizes arbitration using decentralized orchestrators and the EigenLayer restaking protocol.",
+          "Wrote and deployed “Cornell Blockchain Coin” (CBC), an ERC-20 token on the Avalanche C-Chain with future plans to integrate into a larger Cornell Blockchain Decentralized Autonomous Organization (DAO) currently in development."
+        ]
+      }
+    },
+    {
+      "text": "Experience:\n- Position: Software Engineering Intern\n- Company: Entendre Finance\n- Location: Manhattan, New York\n- Dates: Jul 2022 – April 2024\n- Employment Type: Internship\n- Responsibilities:\n  • Implementing initial front-end core experience using React.js front end and Node.js back end, while attending customer calls to learn pain points from early design partners.\n  • Launched a feature enabling single-login client switching, generating $9,600 in annual recurring revenue.\n  • Reduced reporting time by 90% through the automation of blockchain transaction accounting from customer wallet data.",
+      "metadata": {
+        "section": "Experience",
+        "position": "Software Engineering Intern",
+        "company": "Entendre Finance",
+        "location": "Manhattan, New York",
+        "dates": "Jul 2022 – April 2024",
+        "employment_type": "Internship",
+        "responsibilities": [
+          "Implementing initial front-end core experience using React.js front end and Node.js back end, while attending customer calls to learn pain points from early design partners.",
+          "Launched a feature enabling single-login client switching, generating $9,600 in annual recurring revenue.",
+          "Reduced reporting time by 90% through the automation of blockchain transaction accounting from customer wallet data."
+        ]
+      }
+    },
+    {
+      "text": "Experience:\n- Position: Co-Founder\n- Company: Brunswick Cart\n- Location: South Brunswick, New Jersey\n- Dates: Apr 2019 – Dec 2020\n- Employment Type: Full-Time\n- Responsibilities:\n  • Founded during COVID-19 to bring grocery solutions to 200+ high-risk community families and established alternative job opportunities for 15+ displaced Uber and Lyft drivers.\n  • Leveraged AI tools to enhance website SEO, achieving a 30% increase in organic traffic by identifying and targeting high-impact keywords and optimizing content for search engine algorithms.\n  • Developed and managed a React.js-based web platform with 1,000+ product pages.",
+      "metadata": {
+        "section": "Experience",
+        "position": "Co-Founder",
+        "company": "Brunswick Cart",
+        "location": "South Brunswick, New Jersey",
+        "dates": "Apr 2019 – Dec 2020",
+        "employment_type": "Full-Time",
+        "responsibilities": [
+          "Founded during COVID-19 to bring grocery solutions to 200+ high-risk community families and established alternative job opportunities for 15+ displaced Uber and Lyft drivers.",
+          "Leveraged AI tools to enhance website SEO, achieving a 30% increase in organic traffic by identifying and targeting high-impact keywords and optimizing content for search engine algorithms.",
+          "Developed and managed a React.js-based web platform with 1,000+ product pages."
+        ]
+      }
+    },
+    {
+      "text": "Projects:\n- Project Name: AI Study Tool\n- GitHub: [Link](#)\n- Description:\n  • Engineered an AI web app using HuggingFace models with Quantized Low-Rank Adaptation (QLoRA) fine-tuning to convert and summarize PDFs/images of schoolwork into audio files, pulling key insights to simplify students’ workload.\n  • Built a React.js frontend and Flask backend, hosted on AWS.\n  • Integrated Optical Character Recognition (OCR) for text extraction, TTS for audio generation, and Stripe API for billing.",
+      "metadata": {
+        "section": "Projects",
+        "project_name": "AI Study Tool",
+        "github_link": "GitHub",
+        "description": [
+          "Engineered an AI web app using HuggingFace models with Quantized Low-Rank Adaptation (QLoRA) fine-tuning to convert and summarize PDFs/images of schoolwork into audio files, pulling key insights to simplify students’ workload.",
+          "Built a React.js frontend and Flask backend, hosted on AWS.",
+          "Integrated Optical Character Recognition (OCR) for text extraction, TTS for audio generation, and Stripe API for billing."
+        ]
+      }
+    },
+    {
+      "text": "Projects:\n- Project Name: AI Portfolio Website\n- GitHub: [Link](#)\n- Description:\n  • Developed a portfolio website using Langchain RAG and OpenAI API to answer user queries about my personal and professional experiences.\n  • Utilized Microservices Architecture by separating the React.js frontend from the Flask backend, hosted on AWS Amplify with a custom Route 53 domain.",
+      "metadata": {
+        "section": "Projects",
+        "project_name": "AI Portfolio Website",
+        "github_link": "GitHub",
+        "description": [
+          "Developed a portfolio website using Langchain RAG and OpenAI API to answer user queries about my personal and professional experiences.",
+          "Utilized Microservices Architecture by separating the React.js frontend from the Flask backend, hosted on AWS Amplify with a custom Route 53 domain."
+        ]
+      }
+    },
+    {
+      "text": "Projects:\n- Project Name: AI Story Assistant\n- GitHub: [Link](#)\n- Description:\n  • Created GPTree for HackPrinceton, a full-stack React.js based story generation tool that allows writers to organize their ideas and use AI to develop their plot.\n  • Integrated Node.js backend and Express.js server with OpenAI’s GPT-3.5 API to produce dynamic narrative content.",
+      "metadata": {
+        "section": "Projects",
+        "project_name": "AI Story Assistant",
+        "github_link": "GitHub",
+        "description": [
+          "Created GPTree for HackPrinceton, a full-stack React.js based story generation tool that allows writers to organize their ideas and use AI to develop their plot.",
+          "Integrated Node.js backend and Express.js server with OpenAI’s GPT-3.5 API to produce dynamic narrative content."
+        ]
+      }
+    },
+    {
+      "text": "Projects:\n- Project Name: Java Minecraft Mod\n- GitHub: [Link](#)\n- Description:\n  • Programmed a Minecraft Forge mod in Java with custom potion effects.\n  • Contributed 15+ bug fixes and optimized code for performance.\n  • Used Gradle for build management and JSON for texture design.",
+      "metadata": {
+        "section": "Projects",
+        "project_name": "Java Minecraft Mod",
+        "github_link": "GitHub",
+        "description": [
+          "Programmed a Minecraft Forge mod in Java with custom potion effects.",
+          "Contributed 15+ bug fixes and optimized code for performance.",
+          "Used Gradle for build management and JSON for texture design."
+        ]
+      }
+    }
+  ]
+  
