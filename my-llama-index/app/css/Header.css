@@ -1,0 +1,110 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: #F5F5DC; 
+  }
+  
+  .header-name {
+    
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    padding-left: 10px;
+    background-color: transparent;
+    border: transparent;
+  }
+
+  .header-link {
+    
+    font-family: 'Playfair Display', serif;
+    background: none;
+    border: none;
+    color: black; 
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none; 
+    outline: none;
+  }
+  
+  .header-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #682bd7; 
+    transition: width .3s ease; 
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  .header-link:hover::after {
+    width: 100%; 
+  }
+  
+  .email-box {
+    position: absolute; /* or absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; /* or any other size */
+    height: 200px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 1 1 15px rgba(0,0,0,0.2);
+    z-index: 10;
+    border-radius: 5%;
+  }
+  
+  .email-box p {
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  /* .email-box button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background: #ffffff;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .email-box button:hover {
+    background: #0056b3; 
+  }
+   */
+  .x-out {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 10px;
+    background-color: transparent; 
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .email {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    padding-left: 10px;
+  }

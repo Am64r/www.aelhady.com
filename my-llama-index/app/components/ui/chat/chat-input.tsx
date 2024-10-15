@@ -110,25 +110,25 @@ export default function ChatInput(
           autoFocus
           name="message"
           placeholder="Ask anything about Amr..."
-          className="flex-1 min-h-0 h-[40px]"
+          className="flex-1 min-h-0 h-[40px] border-none"
           value={props.input}
           onChange={props.handleInputChange}
           onKeyDown={handleKeyDown}
         />
-        <FileUploader
+        {/* <FileUploader
           onFileUpload={handleUploadFile}
           onFileError={props.onFileError}
           config={{
             allowedExtensions: ALLOWED_EXTENSIONS,
             disabled: props.isLoading,
           }}
-        />
+        /> */}
         {process.env.NEXT_PUBLIC_USE_LLAMACLOUD === "true" &&
           props.setRequestData && (
             <LlamaCloudSelector setRequestData={props.setRequestData} />
           )}
         <Button type="submit" disabled={props.isLoading || !props.input.trim()}>
-          Send message
+          Ask
         </Button>
       </div>
     </form>

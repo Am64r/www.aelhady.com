@@ -1,0 +1,14 @@
+.footer {
+    background-color: #f5f5dcdc; /* Light gray background */
+    color: #6c757d; /* Dark gray text */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Add some padding */
+    
+  }
+  
+  .container {
+    max-width: 1200px; /* Set a max-width for the content */
+    margin: 0 auto; /* Center the content */
+    padding: 0 15px; /* Add some padding */
+  }
+  

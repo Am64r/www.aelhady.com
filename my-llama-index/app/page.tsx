@@ -1,22 +1,62 @@
-import React, { useState, useRef } from 'react';
+"use client";
 
-import Header from "@/app/components/header";
+import { useRef } from "react";
+import Header from "./components/Header";
 import ChatSection from "./components/chat-section";
-import Typewriter from './components/TypeWriter.js';
+import Typewriter from './components/TypeWriter';
+import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
+import LinkedInLogo from './components/LinkedInLogo.js';
+import GitHubLogo from './components/GitHubLogo.js';
+import Email from './components/Email.js';
+import Footer from './components/Footer.js';
 
 export default function Home() {
+  const ref = useRef<IParallax>(null);
+
   return (
-    <main className="h-screen w-screen flex justify-center items-center background-gradient">
-      <div className="space-y-2 lg:space-y-10 w-[90%] lg:w-[60rem]">
-        {/* <Header /> */}
-        <div className="h-[65vh] flex">
-        <div className="flex justify-center items-center gap-[95px]">
-          <Typewriter text="amr elhady" speed={200} fontSize="240px" showCaret={true} />
-        </div>
-          
-          <ChatSection />
-        </div>
-      </div>
+    <main className="h-screen w-screen flex flex-col justify-center items-center background-gradient">
+      <Header parallaxRef={ref} />
+      <Parallax pages={2} ref={ref}>
+        
+        {/* Header Section */}
+        
+
+        {/* Typewriter Section */}
+        <ParallaxLayer
+          offset={0.2}
+          speed={1}
+          factor={2}
+          style={{
+            backgroundSize: 'cover',
+          }}
+        >
+          <div className="w-full flex justify-center items-center">
+            <div className="w-full text-center">
+              <Typewriter text="amr elhady" speed={200} fontSize="220px" showCaret={true} />
+            </div>
+          </div>
+        </ParallaxLayer>
+
+        {/* ChatSection Section */}
+        <ParallaxLayer offset={0.3} speed={0.8}>
+          <div className="w-full h-full flex justify-center items-center">
+            <div className="w-[90%] lg:w-[60rem] h-[65vh] flex justify-center items-center">
+              <ChatSection />
+            </div>
+          </div>
+        </ParallaxLayer>
+
+        {/* Social Media Section */}
+        <ParallaxLayer offset={1.75} speed={0.8}>
+          <div id="socials"></div>
+          <div className="flex justify-center items-center gap-[15px] pb-5">
+            <LinkedInLogo />
+            <GitHubLogo />
+            <Email />
+          </div>
+          <Footer />
+        </ParallaxLayer>
+      </Parallax>
     </main>
   );
 }
