@@ -1,0 +1,18 @@
+@keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #855ecf;
+    }
+  }
+  
+  .typewriter {
+    font-family: 'Source Code Pro', monospace;
+    color: black;
+    white-space: pre-wrap; 
+    overflow: hidden; 
+    animation: blink-caret 2s steps(1) infinite;
+  }
+  

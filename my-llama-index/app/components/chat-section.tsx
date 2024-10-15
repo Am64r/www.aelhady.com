@@ -5,6 +5,8 @@ import { useState } from "react";
 import { ChatInput, ChatMessages } from "./ui/chat";
 import { useClientConfig } from "./ui/chat/hooks/use-config";
 
+import Typewriter from './TypeWriter.js';
+
 export default function ChatSection() {
   const { backend } = useClientConfig();
   const [requestData, setRequestData] = useState<any>();
@@ -35,6 +37,11 @@ export default function ChatSection() {
   return (
 
     <div className="space-y-4 w-full h-full flex flex-col">
+      
+      <div className="flex justify-center items-center gap-[95px]">
+        <Typewriter text="amr elhady" speed={200} fontSize="240px" showCaret={true} />
+      </div>
+
       <ChatInput
         input={input}
         handleSubmit={handleSubmit}
