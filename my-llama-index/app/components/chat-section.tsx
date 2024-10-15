@@ -33,14 +33,8 @@ export default function ChatSection() {
   });
 
   return (
+
     <div className="space-y-4 w-full h-full flex flex-col">
-      <ChatMessages
-        messages={messages}
-        isLoading={isLoading}
-        reload={reload}
-        stop={stop}
-        append={append}
-      />
       <ChatInput
         input={input}
         handleSubmit={handleSubmit}
@@ -52,6 +46,14 @@ export default function ChatSection() {
         requestParams={{ params: requestData }}
         setRequestData={setRequestData}
       />
+      <ChatMessages
+        messages={messages}
+        isLoading={isLoading}
+        reload={reload}
+        stop={stop}
+        append={append}
+      />
+      
     </div>
   );
 }
