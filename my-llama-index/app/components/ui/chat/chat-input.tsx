@@ -109,7 +109,7 @@ export default function ChatInput(
           id="chat-input"
           autoFocus
           name="message"
-          placeholder="Type a message"
+          placeholder="Ask anything about Amr..."
           className="flex-1 min-h-0 h-[40px]"
           value={props.input}
           onChange={props.handleInputChange}

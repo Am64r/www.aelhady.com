@@ -1,3 +1,5 @@
+import React, { useState, useRef } from 'react';
+
 import Header from "@/app/components/header";
 import ChatSection from "./components/chat-section";
 
