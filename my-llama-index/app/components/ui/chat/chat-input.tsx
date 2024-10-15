@@ -88,7 +88,7 @@ export default function ChatInput(
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-xl bg-white p-4 shadow-xl space-y-4 shrink-0"
+      className="flex items-center space-x-2"
     >
       {imageUrl && (
         <UploadImagePreview url={imageUrl} onRemove={() => setImageUrl(null)} />
@@ -104,25 +104,17 @@ export default function ChatInput(
           ))}
         </div>
       )}
-      <div className="flex w-full items-start justify-between gap-4 ">
+      <div className="flex-grow flex items-center space-x-2">
         <Textarea
           id="chat-input"
           autoFocus
           name="message"
           placeholder="Ask anything about Amr..."
-          className="flex-1 min-h-0 h-[40px] border-none"
+          className="flex-grow min-h-0 h-[40px] bg-transparent border-none focus:ring-0 resize-none"
           value={props.input}
           onChange={props.handleInputChange}
           onKeyDown={handleKeyDown}
         />
-        {/* <FileUploader
-          onFileUpload={handleUploadFile}
-          onFileError={props.onFileError}
-          config={{
-            allowedExtensions: ALLOWED_EXTENSIONS,
-            disabled: props.isLoading,
-          }}
-        /> */}
         {process.env.NEXT_PUBLIC_USE_LLAMACLOUD === "true" &&
           props.setRequestData && (
             <LlamaCloudSelector setRequestData={props.setRequestData} />

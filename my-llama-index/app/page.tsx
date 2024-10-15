@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import Header from "./components/Header";
+import Header from "./components/Header.js";
 import ChatSection from "./components/chat-section";
 import Typewriter from './components/TypeWriter';
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
