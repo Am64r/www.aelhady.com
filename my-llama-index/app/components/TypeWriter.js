@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Typewriter.css';
 
-const Typewriter = ({ text, speed, fontSize, showCaret }) => {
+const Typewriter = ({ text, speed, showCaret }) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -15,14 +15,11 @@ const Typewriter = ({ text, speed, fontSize, showCaret }) => {
     }
   }, [index, text.length, speed]);
 
-  const typewriterStyle = {
-    fontSize: fontSize,
-    borderRight: showCaret ? '2px solid orange' : 'none',
-  };
-
   return (
-    <div className="typewriter" style={typewriterStyle}>
-      {text.substring(0, index)}
+    <div className="typewriter-container">
+      <div className="typewriter" style={{ borderRight: showCaret ? '2px solid orange' : 'none' }}>
+        {text.substring(0, index)}
+      </div>
     </div>
   );
 };

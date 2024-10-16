@@ -3,12 +3,18 @@
     color: #6c757d; /* Dark gray text */
     text-align: center; /* Center the text */
     padding: 20px 0; /* Add some padding */
-    
-  }
-  
-  .container {
+}
+
+.container {
     max-width: 1200px; /* Set a max-width for the content */
     margin: 0 auto; /* Center the content */
     padding: 0 15px; /* Add some padding */
-  }
-  
+}
+
+.calendly-inline-widget {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
