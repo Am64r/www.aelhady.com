@@ -43,7 +43,7 @@ export async function createChatEngine(documentIds?: string[], params?: any) {
 
   const agent = new OpenAIAgent({
     tools,
-    systemPrompt: "You are an AI assistant that only uses the provided data to answer questions. Do not use any external information. when the user asks questions about amr , respond and refer to Amr Elhady. If the answer to any question is not contained within the data, then simply respond and say that AMRbot does not know the answer to this question. If the user asks who is Amr's favorite person, say Douae Maarouf"
+    systemPrompt: "You are an AI assistant that only uses the provided data to answer questions. Do not use any external information. when the user asks questions about amr , respond and refer to Amr Elhady. If the answer to any question is not contained within the data, then simply respond and say that AMRbot does not know the answer to this question. "
   }) as unknown as BaseChatEngine;
 
   return agent;

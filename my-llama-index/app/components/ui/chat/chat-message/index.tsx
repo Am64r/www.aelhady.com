@@ -8,21 +8,17 @@ import {
   AgentEventData,
   ChatHandler,
   DocumentFileData,
-  EventData,
   ImageData,
   MessageAnnotation,
   MessageAnnotationType,
   SuggestedQuestionsData,
   ToolData,
   getAnnotationData,
-  getSourceAnnotationData,
 } from "../index";
 import { ChatAgentEvents } from "./chat-agent-events";
 import ChatAvatar from "./chat-avatar";
-import { ChatEvents } from "./chat-events";
 import { ChatFiles } from "./chat-files";
 import { ChatImage } from "./chat-image";
-import { ChatSources } from "./chat-sources";
 import { SuggestedQuestions } from "./chat-suggestedQuestions";
 import ChatTools from "./chat-tools";
 import Markdown from "./markdown";
@@ -56,16 +52,10 @@ function ChatMessageContent({
     annotations,
     MessageAnnotationType.DOCUMENT_FILE,
   );
-  const eventData = getAnnotationData<EventData>(
-    annotations,
-    MessageAnnotationType.EVENTS,
-  );
   const agentEventData = getAnnotationData<AgentEventData>(
     annotations,
     MessageAnnotationType.AGENT_EVENTS,
   );
-
-  const sourceData = getSourceAnnotationData(annotations);
 
   const toolData = getAnnotationData<ToolData>(
     annotations,
@@ -80,13 +70,6 @@ function ChatMessageContent({
     {
       order: 1,
       component: imageData[0] ? <ChatImage data={imageData[0]} /> : null,
-    },
-    {
-      order: -3,
-      component:
-        eventData.length > 0 ? (
-          <ChatEvents isLoading={isLoading} data={eventData} />
-        ) : null,
     },
     {
       order: -2,
@@ -112,11 +95,7 @@ function ChatMessageContent({
     },
     {
       order: 0,
-      component: <Markdown content={message.content} sources={sourceData[0]} />,
-    },
-    {
-      order: 3,
-      component: sourceData[0] ? <ChatSources data={sourceData[0]} /> : null,
+      component: <Markdown content={message.content} />,
     },
     {
       order: 4,

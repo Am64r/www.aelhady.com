@@ -1,25 +1,19 @@
-import { User2 } from "lucide-react";
-import Image from "next/image";
+import React from "react";
 
 export default function ChatAvatar({ role }: { role: string }) {
+  const commonClasses = "flex h-8 w-8 shrink-0 select-none items-center justify-center";
+
   if (role === "user") {
     return (
-      <div className="flex h-8 w-8 shrink-0 select-none items-center justify-center rounded-md border bg-background shadow">
-        <User2 className="h-4 w-4" />
+      <div className={`${commonClasses} text-2xl`}>
+        •
       </div>
     );
   }
 
   return (
-    <div className="flex h-8 w-8 shrink-0 select-none items-center justify-center rounded-md border bg-black text-white shadow">
-      <Image
-        className="rounded-md"
-        src="/llama.png"
-        alt="Llama Logo"
-        width={24}
-        height={24}
-        priority
-      />
+    <div className={`${commonClasses} rounded-md bg-[#F5F5DC] text-black text-base border border-black`} style={{ fontFamily: "'Playfair Display', serif" }}>
+      A|E
     </div>
   );
 }

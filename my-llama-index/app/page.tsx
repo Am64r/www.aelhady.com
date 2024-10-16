@@ -9,6 +9,8 @@ import LinkedInLogo from './components/LinkedInLogo.js';
 import GitHubLogo from './components/GitHubLogo.js';
 import Email from './components/Email.js';
 import Footer from './components/Footer.js';
+import Calendly from './components/Calendly.js';
+import { PopupButton } from "react-calendly";
 
 export default function Home() {
   const ref = useRef<IParallax>(null);
@@ -18,9 +20,6 @@ export default function Home() {
       <Header parallaxRef={ref} />
       <Parallax pages={2} ref={ref}>
         
-        {/* Header Section */}
-        
-
         {/* Typewriter Section */}
         <ParallaxLayer
           offset={0.2}
@@ -54,6 +53,7 @@ export default function Home() {
             <GitHubLogo />
             <Email />
           </div>
+          
           <Footer />
         </ParallaxLayer>
       </Parallax>
