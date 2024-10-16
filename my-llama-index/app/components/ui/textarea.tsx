@@ -9,11 +9,15 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
     return (
       <textarea
         className={cn(
-          "flex w-full bg-transparent text-sm placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+          "flex w-full bg-transparent text-xl placeholder:text-xl placeholder:font-playfair placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
           className,
         )}
         ref={ref}
         {...props}
+        style={{
+          fontFamily: "'Playfair Display', serif",
+          ...props.style,
+        }}
       />
     );
   },

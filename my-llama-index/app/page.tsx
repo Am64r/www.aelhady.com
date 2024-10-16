@@ -30,7 +30,7 @@ export default function Home() {
           }}
         >
           <div className="w-full flex justify-center items-center">
-            <div className="w-full text-center">
+            <div className="w-90 text-center">
               <Typewriter text="amr elhady" speed={200} fontSize="220px" showCaret={true} />
             </div>
           </div>

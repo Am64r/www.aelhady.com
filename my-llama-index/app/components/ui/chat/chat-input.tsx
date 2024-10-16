@@ -8,6 +8,7 @@ import UploadImagePreview from "../upload-image-preview";
 import { ChatHandler } from "./chat.interface";
 import { useFile } from "./hooks/use-file";
 import { LlamaCloudSelector } from "./widgets/LlamaCloudSelector";
+import { ArrowRight } from "lucide-react";
 
 const ALLOWED_EXTENSIONS = ["png", "jpg", "jpeg", "csv", "pdf", "txt", "docx"];
 
@@ -88,7 +89,7 @@ export default function ChatInput(
   return (
     <form
       onSubmit={onSubmit}
-      className="flex items-center space-x-2"
+      className="flex flex-col space-y-2"
     >
       {imageUrl && (
         <UploadImagePreview url={imageUrl} onRemove={() => setImageUrl(null)} />
@@ -104,13 +105,13 @@ export default function ChatInput(
           ))}
         </div>
       )}
-      <div className="flex-grow flex items-center space-x-2">
+      <div className="flex-grow flex flex-col space-y-2">
         <Textarea
           id="chat-input"
           autoFocus
           name="message"
           placeholder="Ask anything about Amr..."
-          className="flex-grow min-h-0 h-[40px] bg-transparent border-none focus:ring-0 resize-none"
+          className="flex-grow min-h-[80px] bg-transparent border-none focus:ring-0 resize-none"
           value={props.input}
           onChange={props.handleInputChange}
           onKeyDown={handleKeyDown}
@@ -119,9 +120,15 @@ export default function ChatInput(
           props.setRequestData && (
             <LlamaCloudSelector setRequestData={props.setRequestData} />
           )}
-        <Button type="submit" disabled={props.isLoading || !props.input.trim()}>
-          Ask
-        </Button>
+        <div className="flex justify-center">
+          <Button 
+            type="submit" 
+            disabled={props.isLoading || !props.input.trim()}
+            className="px-4 py-2 rounded-full w-32"
+          >
+            <ArrowRight className="h-6 w-6" />
+          </Button>
+        </div>
       </div>
     </form>
   );

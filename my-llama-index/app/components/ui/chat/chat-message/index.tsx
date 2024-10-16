@@ -110,7 +110,7 @@ function ChatMessageContent({
   ];
 
   return (
-    <div className="flex-1 gap-4 flex flex-col">
+    <div className="flex-1 gap-4 flex flex-col font-mono" style={{ fontFamily: "'Source Code Pro', monospace" }}>
       {contents
         .sort((a, b) => a.order - b.order)
         .map((content, index) => (
@@ -135,7 +135,7 @@ export default function ChatMessage({
 }) {
   const { isCopied, copyToClipboard } = useCopyToClipboard({ timeout: 2000 });
   return (
-    <div className="flex items-start gap-4 pr-5 pt-5">
+    <div className="flex items-start gap-4 pr-5 pt-5 font-mono" style={{ fontFamily: "'Source Code Pro', monospace" }}>
       <ChatAvatar role={chatMessage.role} />
       <div className="group flex flex-1 justify-between gap-2">
         <ChatMessageContent
