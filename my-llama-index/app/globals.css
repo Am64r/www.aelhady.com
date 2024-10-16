@@ -124,3 +124,16 @@
     animation: slideIn 0.5s ease-out;
   }
 }
+
+/* Add this at the end of the file */
+.scale-x-0 {
+  transform: scaleX(0);
+}
+
+.scale-x-100 {
+  transform: scaleX(1);
+}
+
+.origin-left {
+  transform-origin: left;
+}

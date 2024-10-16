@@ -1,5 +1,5 @@
 import { JSONValue } from "ai";
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Button } from "../button";
 import { DocumentPreview } from "../document-preview";
 import FileUploader from "../file-uploader";
@@ -29,6 +29,9 @@ export default function ChatInput(
     setRequestData?: React.Dispatch<any>;
   },
 ) {
+  const [isFocused, setIsFocused] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
   const {
     imageUrl,
     setImageUrl,
@@ -86,6 +89,18 @@ export default function ChatInput(
     }
   };
 
+  const adjustTextareaHeight = () => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = '1.8em';
+      const scrollHeight = textareaRef.current.scrollHeight;
+      textareaRef.current.style.height = scrollHeight > 28 ? `${scrollHeight}px` : '1.8em';
+    }
+  };
+
+  useEffect(() => {
+    adjustTextareaHeight();
+  }, [props.input]);
+
   return (
     <form
       onSubmit={onSubmit}
@@ -105,22 +120,46 @@ export default function ChatInput(
           ))}
         </div>
       )}
-      <div className="flex-grow flex flex-col space-y-2">
-        <Textarea
-          id="chat-input"
-          autoFocus
-          name="message"
-          placeholder="Ask anything about Amr..."
-          className="flex-grow min-h-[80px] bg-transparent border-none focus:ring-0 resize-none"
-          value={props.input}
-          onChange={props.handleInputChange}
-          onKeyDown={handleKeyDown}
-        />
+      <div className="flex-grow flex flex-col space-y-2 relative">
+        <div 
+          className="relative"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <Textarea
+            ref={textareaRef}
+            id="chat-input"
+            autoFocus
+            name="message"
+            placeholder="Ask anything about Amr..."
+            className={`w-full py-2 px-3 bg-transparent border-black focus:ring-0 resize-none rounded-md transition-colors duration-900 ${
+              (isFocused || isHovered) ? 'bg-slate-200' : ''
+            }`}
+            style={{ 
+              height: '1.8em',
+              minHeight: '1.8em',
+              overflowY: 'hidden'
+            }}
+            value={props.input}
+            onChange={(e) => {
+              props.handleInputChange(e);
+              adjustTextareaHeight();
+            }}
+            onKeyDown={handleKeyDown}
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setIsFocused(false)}
+          />
+          <div 
+            className={`absolute bottom-0 left-0 w-full h-0.5 bg-purple-600 transition-all duration-300 ease-in-out ${
+              (isFocused || isHovered) ? 'scale-x-100' : 'scale-x-0'
+            } origin-left`}
+          ></div>
+        </div>
         {process.env.NEXT_PUBLIC_USE_LLAMACLOUD === "true" &&
           props.setRequestData && (
             <LlamaCloudSelector setRequestData={props.setRequestData} />
           )}
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-2">
           <Button 
             type="submit" 
             disabled={props.isLoading || !props.input.trim()}
