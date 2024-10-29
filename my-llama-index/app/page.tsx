@@ -74,7 +74,7 @@ export default function Home() {
             alignItems: 'center',
           }}
         >
-          <AboutMe />
+          {/* <AboutMe /> */}
         </ParallaxLayer>
 
         {/* Social Media Section, RepoCard, Calendly, and Footer */}
@@ -98,7 +98,7 @@ export default function Home() {
             </div> */}
 
           </ParallaxLayer>
-          <div id="socials" className="flex justify-center items-center gap-[15px] mb-4">
+          <div id="socials" className=" flex justify-center items-center gap-[15px] mb-4">
             <LinkedInLogo />
             <GitHubLogo />
             <Email />
@@ -109,7 +109,7 @@ export default function Home() {
                 url="https://calendly.com/amrelhady/tech-internship-chat"
                 rootElement={rootElement}
                 text="Calendly"
-                className="bg-[#855ecf] hover:bg-[#6f4eac] text-white font-bold py-2 px-4 rounded transition duration-300"
+                className="bg-[#E85A4F] hover:bg-[#E85A4F] text-white font-bold py-2 px-4 rounded transition duration-300"
               />
             )}
           </div>
