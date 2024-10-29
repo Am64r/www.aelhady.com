@@ -19,10 +19,18 @@ const Header = ({ parallaxRef }) => {
         }
     };
 
+    const scrollToAbout = () => {
+        if (parallaxRef.current) {
+            parallaxRef.current.scrollTo(0.4)
+        }
+    }
+
     return (
         <header className="header">
             <button className="header-name" onClick={scrollToTop}>A | E</button>
             <nav>
+                <button className="header-link" onClick={scrollToAbout}>About</button>
+
                 <button className="header-link" onClick={scrollToBottom}>Contact</button>
             </nav>
             {showEmail && (

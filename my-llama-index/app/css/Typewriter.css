@@ -4,7 +4,7 @@
       border-color: transparent;
     }
     50% {
-      border-color: #855ecf;
+      border-color: #E85A4F;
     }
   }
   
@@ -18,7 +18,7 @@
   
   .typewriter {
     font-family: 'Source Code Pro', monospace;
-    color: black;
+    color: #E85A4F;
     white-space: nowrap;
     overflow: hidden;
     font-size: 10vw; /* This makes the font size responsive */

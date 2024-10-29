@@ -133,7 +133,7 @@ export default function ChatInput(
             name="message"
             placeholder="Ask anything about Amr..."
             className={`w-full py-2 px-3 bg-transparent border-black focus:ring-0 resize-none rounded-md transition-colors duration-900 ${
-              (isFocused || isHovered) ? 'bg-slate-200' : ''
+              (isFocused || isHovered) ? 'bg-transparent' : ''
             }`}
             style={{ 
               height: '1.8em',
@@ -149,11 +149,13 @@ export default function ChatInput(
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
           />
-          <div 
-            className={`absolute bottom-0 left-0 w-full h-0.5 bg-purple-600 transition-all duration-300 ease-in-out ${
-              (isFocused || isHovered) ? 'scale-x-100' : 'scale-x-0'
+          <div
+            className={`absolute bottom-0 left-0 w-full h-0.5 transition-all duration-300 ease-in-out ${
+              isFocused || isHovered ? 'scale-x-100' : 'scale-x-0'
             } origin-left`}
+            style={{ backgroundColor: '#E85A4F' }}
           ></div>
+
         </div>
         {process.env.NEXT_PUBLIC_USE_LLAMACLOUD === "true" &&
           props.setRequestData && (

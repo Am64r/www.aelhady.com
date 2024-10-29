@@ -1,3 +1,5 @@
+// page.tsx
+
 "use client";
 
 import { useRef, useEffect, useState } from "react";
@@ -9,7 +11,11 @@ import LinkedInLogo from './components/LinkedInLogo.js';
 import GitHubLogo from './components/GitHubLogo.js';
 import Email from './components/Email.js';
 import Footer from './components/Footer.js';
+import AboutMe from "./components/AboutMe";
 import { PopupButton } from "react-calendly";
+import RepoCard from "react-repo-card";
+import { InstagramEmbed } from 'react-social-media-embed';
+import ThreeParticleVisualizer from "./components/ThreeParticleVisualizer";
 
 export default function Home() {
   const ref = useRef<IParallax>(null);
@@ -21,9 +27,10 @@ export default function Home() {
 
   return (
     <main className="h-screen w-screen flex flex-col justify-between background-gradient">
+      
       <Header parallaxRef={ref} />
       <Parallax pages={2} ref={ref}>
-        
+      
         {/* Typewriter Section */}
         <ParallaxLayer
           offset={0}
@@ -56,9 +63,23 @@ export default function Home() {
           </div>
         </ParallaxLayer>
 
-        {/* Social Media Section, Calendly, and Footer */}
+        {/* About Me Section */}
+        <ParallaxLayer
+          offset={0.9}  // Adjust this for exact positioning
+          speed={0.8}
+          factor={0.8}
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <AboutMe />
+        </ParallaxLayer>
+
+        {/* Social Media Section, RepoCard, Calendly, and Footer */}
         <ParallaxLayer 
-          offset={1.6}
+          offset={1.4}  // Slightly below AboutMe for a natural flow
           speed={0.5}
           factor={0.4}
           style={{
@@ -68,6 +89,15 @@ export default function Home() {
             alignItems: 'center',
           }}
         >
+
+          <ParallaxLayer >
+            {/* <RepoCard username="Am64r" repository="www.aelhady.com" />
+            
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <InstagramEmbed url="https://www.instagram.com/reel/C7c3EOTOCme/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" width={328} />
+            </div> */}
+
+          </ParallaxLayer>
           <div id="socials" className="flex justify-center items-center gap-[15px] mb-4">
             <LinkedInLogo />
             <GitHubLogo />
@@ -83,6 +113,7 @@ export default function Home() {
               />
             )}
           </div>
+          
           <Footer />
         </ParallaxLayer>
       </Parallax>
