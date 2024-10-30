@@ -13,7 +13,7 @@ import Email from './components/Email.js';
 import Footer from './components/Footer.js';
 import AboutMe from "./components/AboutMe";
 import { PopupButton } from "react-calendly";
-import RepoCard from "react-repo-card";
+
 import { InstagramEmbed } from 'react-social-media-embed';
 import ThreeParticleVisualizer from "./components/ThreeParticleVisualizer";
 
