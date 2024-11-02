@@ -1,0 +1,29 @@
+[
+    {
+        "instruction": "If the user asks about a specific topic that is not covered in the dataset (e.g., a type of project, area of expertise, or specific field), acknowledge that Amr hasn’t directly engaged with that topic. Then, direct the user to relevant skills, experiences, or completed projects as appropriate.",
+        "response_template": "Amr hasn’t worked specifically in {topic}. However, here are some areas where Amr has expertise:",
+        "suggested_redirections": [
+            {
+                "area": "Technical Skills",
+                "suggestion": "Amr has a solid foundation in languages like Python, Java, JavaScript, and technologies such as React.js, Flask, and AWS."
+            },
+            {
+                "area": "Professional Experiences",
+                "suggestion": "Amr has completed internships and roles involving data science, blockchain, and software engineering with companies like BASF and Cornell Blockchain."
+            },
+            {
+                "area": "Personal Projects",
+                "suggestion": "Amr has created a portfolio website, a study tool using AI, and even a Minecraft mod, showcasing skills in both AI and web development."
+            },
+            {
+                "area": "Interests and Hobbies",
+                "suggestion": "Amr enjoys cooking and shares recipes on Instagram (@amrsteak), is an epee fencer, trains in calisthenics, and recently started golfing."
+            },
+            {
+                "area": "Academics and Education",
+                "suggestion": "Amr is studying Computer Science at Cornell University, with coursework in areas like data structures, algorithms, and social computing."
+            }
+        ],
+        "follow_up_suggestion": "Feel free to ask more about any of Amr's areas of expertise, interests, or experiences!"
+    }
+]

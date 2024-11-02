@@ -29,7 +29,7 @@ export default function Home() {
     <main className="h-screen w-screen flex flex-col justify-between background-gradient">
       
       <Header parallaxRef={ref} />
-      <Parallax pages={2} ref={ref}>
+      <Parallax pages={1.3} ref={ref}>
       
         {/* Typewriter Section */}
         <ParallaxLayer
@@ -49,10 +49,12 @@ export default function Home() {
 
         {/* ChatSection Section */}
         <ParallaxLayer 
-          offset={0.4} 
+          offset={0.35} 
           speed={0.8}
           factor={0.8}
+          
           style={{
+            zIndex: 9,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'flex-start',
@@ -79,7 +81,7 @@ export default function Home() {
 
         {/* Social Media Section, RepoCard, Calendly, and Footer */}
         <ParallaxLayer 
-          offset={1.4}  // Slightly below AboutMe for a natural flow
+          offset={0.9}  // Slightly below AboutMe for a natural flow
           speed={0.5}
           factor={0.4}
           style={{
@@ -87,6 +89,7 @@ export default function Home() {
             flexDirection: 'column',
             justifyContent: 'flex-end',
             alignItems: 'center',
+            zIndex: 10,
           }}
         >
 
@@ -98,18 +101,28 @@ export default function Home() {
             </div> */}
 
           </ParallaxLayer>
-          <div id="socials" className=" flex justify-center items-center gap-[15px] mb-4">
+          <div
+            id="socials"
+            className="flex justify-center items-center gap-[20px] mb-4"
+            style={{ zIndex: 10, position: "relative" }}
+          >
             <LinkedInLogo />
             <GitHubLogo />
-            <Email />
-          </div>
-          <div className="mb-4">
             {rootElement && (
               <PopupButton
                 url="https://calendly.com/amrelhady/tech-internship-chat"
                 rootElement={rootElement}
-                text="Calendly"
-                className="bg-[#E85A4F] hover:bg-[#E85A4F] text-white font-bold py-2 px-4 rounded transition duration-300"
+                text="CALENDLY"
+                styles={{
+                  background: "none",
+                  border: "none",
+                  fontFamily: '"Source Code Pro", monospace',
+                  color: "#E85A4F",
+                  fontSize: "24px", // Match the font size of the other links
+                  fontWeight: "normal",
+                  textDecoration: "none",
+                  cursor: "pointer",
+                }}
               />
             )}
           </div>
